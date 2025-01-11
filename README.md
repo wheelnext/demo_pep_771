@@ -17,7 +17,7 @@ As an example, running:
 
 will automatically install the 'recommended' extras and will be equivalent to:
 
-    pip install[recommended]
+    pip install ".[recommended]"
 
 Note that numpy gets installed as it is in the recommended dependencies.
 
