@@ -1,0 +1,13 @@
+[build-system]
+requires = ["flit-core @ git+https://github.com/astrofrog/flit@default-extras-pep#subdirectory=flit_core"]
+build-backend = "flit_core.buildapi"
+
+[project]
+name = "pep9999_demo"
+authors = [{name = "Thomas Robitaille", email = "thomas.robitaille@gmail.com"}]
+dynamic = ["version", "description"]
+default-optional-dependencies = ["recommended"]
+
+[project.optional-dependencies]
+recommended = ["numpy"]
+yaml = ["pyyaml"]
