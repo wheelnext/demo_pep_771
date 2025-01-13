@@ -11,18 +11,24 @@ and this also relies automatically on the following branch of flit:
 
 https://github.com/astrofrog/flit/tree/default-extras-pep
 
-As an example, running:
+If you change to the ``package-recommended-extra``, you should be able to do:
+
+* Install the package including the recommended extra:
 
     pip install .
 
-will automatically install the 'recommended' extras and will be equivalent to:
+* Install the package with the recommended extras explicitly:
 
     pip install ".[recommended]"
 
-Note that numpy gets installed as it is in the recommended dependencies.
+* Do a minimal installation of the package with no recommended extra:
 
-On the other hand, if running:
+    pip install ".[minimal]"
+
+* Install the package with the ``yaml`` extra which causes the recommended extra to still be installed:
 
     pip install ".[yaml]"
 
-The recommended dependencies are no longer installed by default.
+* Install the package with the ``test`` extra which installs test dependencies and disables the default ``recommended`` extra
+
+    pip install ".[test]"
