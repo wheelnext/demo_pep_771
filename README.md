@@ -15,20 +15,20 @@ If you change to the ``package-recommended-extra``, you should be able to do:
 
 * Install the package including the recommended extra:
 
-    pip install .
+      pip install .
 
 * Install the package with the recommended extras explicitly:
 
-    pip install ".[recommended]"
+      pip install ".[recommended]"
 
 * Do a minimal installation of the package with no recommended extra:
 
-    pip install ".[minimal]"
+      pip install ".[minimal]"
 
 * Install the package with the ``yaml`` extra which causes the recommended extra to still be installed:
 
-    pip install ".[yaml]"
+      pip install ".[yaml]"
 
 * Install the package with the ``test`` extra which installs test dependencies and disables the default ``recommended`` extra
 
-    pip install ".[test]"
+      pip install ".[test]"
