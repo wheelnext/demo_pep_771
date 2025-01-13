@@ -3,11 +3,13 @@ requires = ["flit-core @ git+https://github.com/astrofrog/flit@default-extras-pe
 build-backend = "flit_core.buildapi"
 
 [project]
-name = "pep9999_demo"
+name = "package_with_recommended"
 authors = [{name = "Thomas Robitaille", email = "thomas.robitaille@gmail.com"}]
 dynamic = ["version", "description"]
 default-optional-dependencies = ["recommended"]
 
 [project.optional-dependencies]
 recommended = ["numpy"]
-yaml = ["pyyaml"]
+yaml = ["package_with_recommended[recommended]", "pyyaml"]
+test = ["pytest"]
+minimal = []
